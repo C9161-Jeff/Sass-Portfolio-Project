@@ -1,0 +1,23 @@
+$primary-color:#272727;
+$secondary-color:#ff652f;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@mixin transition-ease{/*fonksyon oluşturmak gibi*/
+    transition:all  0.5s ease-in-out;/*geçiş (1neye uygulanacak,2süre,3ne yapılacak,*/
+    
+}
+
+
+/*sayfalardaki renkler deüiştiği zaman yada farklı renkler kullandıgımda font ların uyum sağlaması için;*/
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
